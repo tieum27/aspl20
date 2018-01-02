@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Accueil", root_path, method: :get %></a>
+      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Activites
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="nav-link dropdown-item" <%= link_to "Lieux", lieux_index_path, method: :get %></a>
+              <a class="nav-link dropdown-item" href="#">Natation</a>
+              <a class="nav-link dropdown-item" href="#">Aquagym</a>
+              <a class="nav-link dropdown-item" href="#">Bebes Nageurs</a>
+              <a class="nav-link dropdown-item" href="#">Gymnastique Adultes</a>
+              <a class="nav-link dropdown-item" href="#">Gymnastique Enfants</a>
+              <a class="nav-link dropdown-item" href="#">Trampoline</a>
+          </div>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" <%= link_to "Lieux", lieux_index_path, method: :get %></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" <%= link_to "Inscription", inscription_index_path, method: :get %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Contacts", contacts_index_path, method: :get %></a>
+      </li>
+    </ul>
+ </div>
+</nav>

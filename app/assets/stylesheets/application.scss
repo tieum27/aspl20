@@ -1,0 +1,18 @@
+@import "bootstrap";
+
+$clean: #A7D2CB;
+
+.container2 {
+  min-height: 100vh;
+  position: relative;
+}
+
+#navbarNav{
+  padding-left: 175px;
+}
+.navbar {
+  background-color: $clean;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
