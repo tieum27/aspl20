@@ -8,11 +8,12 @@ $clean: #A7D2CB;
 }
 
 #navbarNav{
-  padding-left: 175px;
+  flex: none;
 }
+
 .navbar {
   background-color: $clean;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size: 1em;
 }

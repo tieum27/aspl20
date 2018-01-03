@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'trampoline/index'
+
+  get 'gym_enfants/index'
+
+  get 'gym_adultes/index'
+
+  get 'bb_nageurs/index'
+
+  get 'aquagym/index'
+
+  get 'natation/index'
+
   get 'lieux/index'
 
   get 'activites/index'

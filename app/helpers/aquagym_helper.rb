@@ -1,0 +1,2 @@
+module AquagymHelper
+end
