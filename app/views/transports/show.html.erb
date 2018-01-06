@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type transport:</strong>
+  <%= @transport.type_transport %>
+</p>
+
+<p>
+  <strong>Ligne:</strong>
+  <%= @transport.ligne %>
+</p>
+
+<p>
+  <strong>Arret:</strong>
+  <%= @transport.arret %>
+</p>
+
+<p>
+  <strong>Equipement:</strong>
+  <%= @transport.equipement %>
+</p>
+
+<%= link_to 'Edit', edit_transport_path(@transport) %> |
+<%= link_to 'Back', transports_path %>

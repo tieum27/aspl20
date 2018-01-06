@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_transport: MyString
+  ligne: MyString
+  arret: MyString
+  equipement: one
+
+two:
+  type_transport: MyString
+  ligne: MyString
+  arret: MyString
+  equipement: two

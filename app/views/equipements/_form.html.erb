@@ -1,0 +1,50 @@
+<%= form_with(model: equipement, local: true) do |form| %>
+  <% if equipement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equipement.errors.count, "error") %> prohibited this equipement from being saved:</h2>
+
+      <ul>
+      <% equipement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.hidden_field :latitude, id: :equipement_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :longitude, id: :equipement_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :equipement_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adresse %>
+    <%= form.text_field :adresse, id: :equipement_adresse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cp %>
+    <%= form.text_field :cp, id: :equipement_cp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ville %>
+    <%= form.text_field :ville, id: :equipement_ville %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_equipement %>
+    <%= form.text_field :type_equipement, id: :equipement_type_equipement %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

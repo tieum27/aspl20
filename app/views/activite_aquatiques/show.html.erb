@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @activite_aquatique.nom %>
+</p>
+
+<p>
+  <strong>Jour:</strong>
+  <%= @activite_aquatique.jour %>
+</p>
+
+<p>
+  <strong>Debut:</strong>
+  <%= @activite_aquatique.debut %>
+</p>
+
+<p>
+  <strong>Fin:</strong>
+  <%= @activite_aquatique.fin %>
+</p>
+
+<p>
+  <strong>Equipement:</strong>
+  <%= @activite_aquatique.equipement.name %>
+</p>
+
+<%= link_to 'Edit', edit_activite_aquatique_path(@activite_aquatique) %> |
+<%= link_to 'Back', activite_aquatiques_path %>

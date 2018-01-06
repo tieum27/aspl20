@@ -1,2 +1,13 @@
-<h1>Natation#index</h1>
-<p>Find me in app/views/natation/index.html.erb</p>
+<h1>Natation</h1>
+  <h4>NATATION ENFANTS</h4>
+    <p>nés en 2012 et avant<br>
+    (155 euros)</p>
+    <p>Des tests seront organisés à la reprise afin de déterminer la composition des différents groupes.<br>
+    Confirmation des inscriptions pour les nouveaux adhérents à la suite de ces mêmes tests.</p>
+
+    <% @group1.each do |activite_aquatiques| %>
+        <p><%= activite_aquatiques.jour %><br />
+           <%= activite_aquatiques.debut %> - <%= activite_aquatiques.fin %><br />
+           <%= activite_aquatiques.equipement.name %>
+       </p>
+    <% end %>

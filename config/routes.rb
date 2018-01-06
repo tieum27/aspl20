@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :transports
+  resources :activite_aquatiques
+  resources :equipements
   get 'trampoline/index'
 
   get 'gym_enfants/index'

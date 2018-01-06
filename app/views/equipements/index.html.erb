@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Equipements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Adresse</th>
+      <th>Cp</th>
+      <th>Ville</th>
+      <th>Type equipement</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipements.each do |equipement| %>
+      <tr>
+        <td><%= equipement.name %></td>
+        <td><%= equipement.adresse %></td>
+        <td><%= equipement.cp %></td>
+        <td><%= equipement.ville %></td>
+        <td><%= equipement.type_equipement %></td>
+        <td><%= link_to 'Show', equipement %></td>
+        <td><%= link_to 'Edit', edit_equipement_path(equipement) %></td>
+        <td><%= link_to 'Destroy', equipement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equipement', new_equipement_path %>
