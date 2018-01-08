@@ -5,9 +5,17 @@
     <p>Des tests seront organisés à la reprise afin de déterminer la composition des différents groupes.<br>
     Confirmation des inscriptions pour les nouveaux adhérents à la suite de ces mêmes tests.</p>
 
-    <% @group1.each do |activite_aquatiques| %>
-        <p><%= activite_aquatiques.jour %><br />
-           <%= activite_aquatiques.debut %> - <%= activite_aquatiques.fin %><br />
-           <%= activite_aquatiques.equipement.name %>
+    <% @group3.each do |activite_aquatique| %>
+        <p class="<%= 'complet' if activite_aquatique.complet %>"><%= activite_aquatique.jour %><br />
+           <%= activite_aquatique.debut %> - <%= activite_aquatique.fin %><br />
+           <%= activite_aquatique.equipement.name %>
+       </p>
+    <% end %>
+
+    <% @aquagym.each do |aquagym| %>
+        <p id="<%= 'complet' if aquagym.complet == true %>"><%= aquagym.jour %><br />
+           <%= aquagym.debut %> - <%= aquagym.fin %><br />
+           <%= aquagym.complet %>
+           <%= aquagym.equipement.name %>
        </p>
     <% end %>

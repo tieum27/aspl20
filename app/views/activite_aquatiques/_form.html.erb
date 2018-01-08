@@ -40,6 +40,10 @@
     <%= form.label :equipement_id %>
     <%= form.text_field :equipement_id, id: :activite_aquatique_equipement_id %>
   </div>
+  <div>
+    <%= form.check_box :complet, {:class => "complet"}, "true", "false" %>
+    <%= label_tag(:complet, "Complet") %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

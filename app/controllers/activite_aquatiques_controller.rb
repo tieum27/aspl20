@@ -70,6 +70,6 @@ class ActiviteAquatiquesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activite_aquatique_params
-      params.require(:activite_aquatique).permit(:nom, :age_group, :jour, :debut, :fin, :equipement_id)
+      params.require(:activite_aquatique).permit(:nom, :age_group, :jour, :debut, :fin, :equipement_id, :complet)
     end
 end
