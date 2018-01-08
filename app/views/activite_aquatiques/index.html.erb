@@ -23,7 +23,7 @@
         <td><%= activite_aquatique.jour %></td>
         <td><%= activite_aquatique.debut %></td>
         <td><%= activite_aquatique.fin %></td>
-        <td><%= activite_aquatique.equipement %></td>
+        <td><%= activite_aquatique.equipement.name %></td>
         <td><%= link_to 'Show', activite_aquatique %></td>
         <td><%= link_to 'Edit', edit_activite_aquatique_path(activite_aquatique) %></td>
         <td><%= link_to 'Destroy', activite_aquatique, method: :delete, data: { confirm: 'Are you sure?' } %></td>
