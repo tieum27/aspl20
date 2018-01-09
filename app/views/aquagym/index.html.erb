@@ -1,2 +1,11 @@
-<h1>Aquagym#index</h1>
-<p>Find me in app/views/aquagym/index.html.erb</p>
+<h1>Aquagym</h1>
+<p>Nous ne prendrons en compte les demandes d’inscriptions qu’à partir du 15 juin 2017 , en fonction des places encore disponibles dans nos différents créneaux.<br />
+Reprise des séances semaine du 4 septembre 2018<br />
+Aucune inscription sur place ou par téléphone.</p>
+
+    <% @aquagym.each do |aquagym| %>
+        <p id="<%= 'complet' if aquagym.complet == true %>"><%= aquagym.jour %><br />
+           <%= aquagym.debut %> - <%= aquagym.fin %><br />
+           <%= aquagym.equipement.name %>
+       </p>
+    <% end %>

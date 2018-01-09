@@ -1,4 +1,8 @@
 <h1>Natation</h1>
+  <p>Nous ne prendrons en compte les demandes d’inscriptions qu’à partir du 15 juin 2017 , en fonction des places encore disponibles dans nos différents créneaux.<br />
+  Reprise des séances semaine du 4 septembre 2018<br />
+  Aucune inscription sur place ou par téléphone.</p>
+
   <h4>NATATION ENFANTS</h4>
     <p>nés en 2012 et avant<br>
     (155 euros)</p>
@@ -11,11 +15,44 @@
            <%= activite_aquatique.equipement.name %>
        </p>
     <% end %>
+    
+  <h4>NATATION ENFANTS</h4>
+   <p>Nés en 2013 et 2014, familiarisation à la natation Inscription définitive après une première séance d’essai.<br />
+    (155 euros)</p>
+    <p>Des tests seront organisés à la reprise afin de déterminer la composition des différents groupes.<br />
+    Confirmation des inscriptions pour les nouveaux adhérents à la suite de ces mêmes tests.</p>
 
-    <% @aquagym.each do |aquagym| %>
-        <p id="<%= 'complet' if aquagym.complet == true %>"><%= aquagym.jour %><br />
-           <%= aquagym.debut %> - <%= aquagym.fin %><br />
-           <%= aquagym.complet %>
-           <%= aquagym.equipement.name %>
-       </p>
+    <% @group1.each do |activite_aquatique| %>
+    <p class="<%= 'complet' if activite_aquatique.complet %>"><%= activite_aquatique.jour %><br />
+      <%= activite_aquatique.debut %> - <%= activite_aquatique.fin %><br />
+      <%= activite_aquatique.equipement.name %>
+    </p>
+    <% end %>
+
+  <h4>NATATION ENFANTS</h4>
+   <p>de 2012 à 2008<br />
+    (155 euros)</p>
+    <p>Des tests seront organisés à la reprise afin de déterminer la composition des différents groupes.<br />
+    Confirmation des inscriptions pour les nouveaux adhérents à la suite de ces mêmes tests.</p>
+
+    <% @group2.each do |activite_aquatique| %>
+    <p class="<%= 'complet' if activite_aquatique.complet %>"><%= activite_aquatique.jour %><br />
+      <%= activite_aquatique.debut %> - <%= activite_aquatique.fin %><br />
+      <%= activite_aquatique.equipement.name %>
+    </p>
+    <% end %>
+
+
+  <h4>NATATION ADULTES</h4>
+    (155 euros)
+    <h5>Perfectionnement</h5>
+    <p>Les séances sont libres. Il ne s’agit pas d’entraînement . Un maitre nageur est présent et disponible afin de vous conseiller.</p>
+    <h5>Apprentissage (débutants)</h5>
+    <p>Séances encadrées par un maitre nageur.</p>
+
+    <% @natationAdultes.each do |activite_aquatique| %>
+    <p class="<%= 'complet' if activite_aquatique.complet %>"><%= activite_aquatique.jour %><br />
+      <%= activite_aquatique.debut %> - <%= activite_aquatique.fin %><br />
+      <%= activite_aquatique.equipement.name %>
+    </p>
     <% end %>

@@ -3,7 +3,7 @@ class NatationController < ApplicationController
       @group1 = ActiviteAquatique.where("age_group='1'")
       @group2 = ActiviteAquatique.where("age_group='2'")
       @group3 = ActiviteAquatique.where("age_group='3'")
-      @aquagym = ActiviteAquatique.where("nom='Aquagym'")
+      @natationAdultes = ActiviteAquatique.where("nom='Natation Adultes'")
 
   end
 end
