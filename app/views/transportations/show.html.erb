@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equipement:</strong>
+  <%= @transportation.equipement.name %>
+</p>
+
+<p>
+  <strong>Transports:</strong>
+  <%= @transportation.transport.ligne %>
+</p>
+
+<%= link_to 'Edit', edit_transportation_path(@transportation) %> |
+<%= link_to 'Back', transportations_path %>

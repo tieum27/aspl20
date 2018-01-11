@@ -1,3 +1,4 @@
 class Transport < ApplicationRecord
-  belongs_to :equipement
+  has_many :tranportations
+  has_many :equipements, through: :transportations
 end

@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Type transport</th>
       <th>Ligne</th>
       <th>Arret</th>
-      <th>Equipement</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @transports.each do |transport| %>
       <tr>
+        <td><%= transport.id %></td>
         <td><%= transport.type_transport %></td>
         <td><%= transport.ligne %></td>
         <td><%= transport.arret %></td>
-        <td><%= transport.equipement %></td>
         <td><%= link_to 'Show', transport %></td>
         <td><%= link_to 'Edit', edit_transport_path(transport) %></td>
         <td><%= link_to 'Destroy', transport, method: :delete, data: { confirm: 'Are you sure?' } %></td>

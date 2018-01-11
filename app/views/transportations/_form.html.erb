@@ -1,0 +1,27 @@
+<%= form_with(model: transportation, local: true) do |form| %>
+  <% if transportation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transportation.errors.count, "error") %> prohibited this transportation from being saved:</h2>
+
+      <ul>
+      <% transportation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :equipement_id %>
+    <%= form.text_field :equipement_id, id: :transportation_equipement_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transport_id %>
+    <%= form.text_field :transport_id, id: :transportation_transport_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

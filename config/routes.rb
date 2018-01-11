@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :transportations
   resources :transports
   resources :activite_aquatiques
   resources :equipements

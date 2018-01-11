@@ -1,3 +1,24 @@
 <h1>Lieux</h1>
 <h2>Piscines</h2>
-<h2>Gymnases</h2>
+<% @piscine.each do |equipement| %>
+  <p>
+    <%= equipement.name %><br />
+    <%= equipement.adresse %><br />
+    <%= equipement.cp %> <%= equipement.ville %>
+  <br />
+  Metro:<br />
+  <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+    <% if transportation.transport.type_transport == 'Metro' %>
+      Ligne :<%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
+    <% end %>
+  <% end %>
+  <br />
+  Bus:<br />
+  <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+    <% if transportation.transport.type_transport == 'Bus' %>
+      Ligne :<%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
+    <% end %>
+  <% end %>
+  <br />
+  </p>
+<% end %>
