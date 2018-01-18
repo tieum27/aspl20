@@ -41,7 +41,7 @@
 
   <div class="field">
     <%= form.label :type_equipement %>
-    <%= form.text_field :type_equipement, id: :equipement_type_equipement %>
+    <%= form.select :type_equipement, options_for_select(["Piscine", "Gymnase"]) %>
   </div>
 
   <div class="actions">

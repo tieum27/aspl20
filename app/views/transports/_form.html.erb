@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :type_transport %>
-    <%= form.text_field :type_transport, id: :transport_type_transport %>
+    <%= form.select :type_transport, options_for_select(["Metro", "Bus"]) %>
   </div>
 
   <div class="field">

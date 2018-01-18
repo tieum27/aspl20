@@ -13,17 +13,38 @@
 
   <div class="field">
     <%= form.label :nom %>
-    <%= form.text_field :nom, id: :activite_aquatique_nom %>
+    <%= form.select :nom, options_for_select(["Natation Enfants", "Natation Adultes","BB Nageurs", "Aquagym"]) %>
   </div>
 
-  <div class="field">
+  <div class="field flexing">
+    <table>
+      <tr>
+        <th>Goupe</th>
+        <th>Age (Natation Enfants)</th>
+        <th>Age (BB Nageurs)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2013 - 2014</td>
+        <td>2015 et apres</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>de 2013 a 2009</td>
+        <td>2015 - 14 - 13</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>2012 et avant</td>
+      </tr>
+    </table>
     <%= form.label :group %>
-    <%= form.text_field :age_group, id: :activite_aquatique_age_group %>
+    <%= form.select :age_group, options_for_select(["1", "2", "3"]) %>
   </div>
 
   <div class="field">
     <%= form.label :jour %>
-    <%= form.text_field :jour, id: :activite_aquatique_jour %>
+    <%= form.select :jour, options_for_select(["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]) %>
   </div>
 
   <div class="field">
@@ -38,7 +59,7 @@
 
   <div class="field">
     <%= form.label :equipement_id %>
-    <%= form.text_field :equipement_id, id: :activite_aquatique_equipement_id %>
+    <%= form.collection_select :equipement_id, @equipement, :id, :name %>
   </div>
   <div>
     <%= form.check_box :complet, {:class => "complet"}, "true", "false" %>

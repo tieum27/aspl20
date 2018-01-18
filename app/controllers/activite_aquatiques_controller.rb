@@ -16,6 +16,7 @@ class ActiviteAquatiquesController < ApplicationController
   # GET /activite_aquatiques/new
   def new
     @activite_aquatique = ActiviteAquatique.new
+    @equipement = Equipement.where(:type_equipement => "Piscine")
   end
 
   # GET /activite_aquatiques/1/edit

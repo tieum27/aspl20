@@ -15,6 +15,8 @@ class TransportationsController < ApplicationController
   # GET /transportations/new
   def new
     @transportation = Transportation.new
+    @equipement = Equipement.all
+    @transport = Transport.order(:type_transport, ligne: :asc)
   end
 
   # GET /transportations/1/edit
@@ -60,6 +62,12 @@ class TransportationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def ligne_arret
+    "#{ligne}: #{arret}"
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
