@@ -8,14 +8,14 @@
       <%= equipement.cp %> <%= equipement.ville %>
       <br />
       Metro:<br />
-      <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+      <% equipement.transportations.each do |transportation| %>
       <% if transportation.transport.type_transport == 'Metro' %>
       Ligne :<%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
       <% end %>
       <% end %>
       <br />
       Bus:<br />
-      <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+      <% equipement.transportations.each do |transportation| %>
       <% if transportation.transport.type_transport == 'Bus' %>
       Ligne :<%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
       <% end %>
@@ -34,14 +34,14 @@
       <%= equipement.cp %> <%= equipement.ville %>
       <br />
       Metro:<br />
-      <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+      <% equipement.transportations.each do |transportation| %>
       <% if transportation.transport.type_transport == 'Metro' %>
       Ligne: <%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
       <% end %>
       <% end %>
       <br />
       Bus:<br />
-      <% @transportations.where(:equipement_id => equipement.id).each do |transportation| %>
+      <%equipement.transportations.each do |transportation| %>
       <% if transportation.transport.type_transport == 'Bus' %>
       Ligne: <%= transportation.transport.ligne %> (<%= transportation.transport.arret %>)<br />
       <% end %>
