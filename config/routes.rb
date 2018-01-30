@@ -15,6 +15,14 @@ Rails.application.routes.draw do
 
   resources 'uploads', only: [:create, :destroy]
 
+  resources :equipements do
+    get 'map_location'
+  end
+
+  resources :lieux do
+    get 'map_location'
+  end
+
   get 'trampoline/index'
 
   get 'gym_enfants/index'

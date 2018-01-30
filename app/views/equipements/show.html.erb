@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
+<div id="equipement_map" data-equipement-id="<%=@equipement.id%>">Google Map will appear here...</div>
 
 <p>
+  <strong>Latitude:</strong>
+  <%= @equipement.latitude %>
+</p>
+  <strong>Longitude:</strong>
+  <%= @equipement.longitude %>
+</p>
   <strong>Name:</strong>
   <%= @equipement.name %>
 </p>

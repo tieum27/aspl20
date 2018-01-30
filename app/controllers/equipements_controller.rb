@@ -61,6 +61,16 @@ class EquipementsController < ApplicationController
     end
   end
 
+  def map_location
+    @equipement = Equipement.find(params[:equipement_id])
+    @hash = Gmaps4rails.build_markers(@equipement) do |equipement, marker|
+      marker.lat(equipement.latitude)
+      marker.lng(equipement.longitude)
+      marker.infowindow("<em>" + equipement.adresse + "</em>")
+    end
+    render json: @hash.to_json
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_equipement
